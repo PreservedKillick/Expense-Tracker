@@ -1,4 +1,16 @@
 var Contact = {
+  all: [],
+  initialize: function(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.addresses = [];
+  },
+  create: function(firstName, lastName){
+    var contact = Object.create(Contact);
+    contact.initialize(firstName, lastName);
+    Contact.all.push(contact);
+    return contact;
+  },
   fullName: function() {
     return this.firstName + " " + this.lastName;
   }
