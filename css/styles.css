@@ -6,6 +6,10 @@
   display: none;
 }
 
+#show-contacts {
+  display: none;
+}
+
 .contact {
   cursor: pointer;
   color: #08c;
