@@ -5,81 +5,39 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Address book</title>
+    <title>Expense Tracker</title>
   </head>
   <body>
     <div class="container">
-      <h1>Address book</h1>
+      <h1>Expense Organizer</h1>
 
       <div class="row">
         <div class="col-md-6">
-          <h2>Add a contact:</h2>
-          <form id="new-contact">
+          <h2>Add Purchase:</h2>
+          <form id="new-list">
             <div class="form-group">
-              <label for="new-first-name">First name</label>
-              <input type="text" class="form-control" id="new-first-name">
+              <label for="new-purchase-description"></label>
+              <input type="text" class="form-control" id="new-purchase-description" placeholder="Description...">
             </div>
             <div class="form-group">
-              <label for="new-last-name">Last name</label>
-              <input type="text" class="form-control" id="new-last-name">
+              <label for="new-purchase-amount"></label>
+              <input type="text" class="form-control" id="new-purchase-amount" placeholder="Amount...">
             </div>
-
-            <div id="new-addresses">
-              <div class="new-address">
-                <div class="form-group">
-                  <label for="new-street">Street</label>
-                  <input type="text" class="form-control new-street">
-                </div>
-                <div class="form-group">
-                  <label for="new-city">City</label>
-                  <input type="text" class="form-control new-city">
-                </div>
-                <div class="form-group">
-                  <label for="new-state">State</label>
-                  <input type="text" class="form-control new-state">
-                </div>
-                <div class="form-group">
-                  <label for="new-zip-code">Zip Code</label>
-                  <input type="text" class="form-control new-zip-code">
-                </div>
-              </div>
-            </div>
-            <div id="new-phone-numbers">
-              <div class="new-phone-number">
-                <div class="form-group">
-                  <label for="new-number">Phone Number</label>
-                  <input type="text" class="form-control new-number">
-                </div>
-              </div>  
-            </div>
-
-            <span class="btn btn-primary" id="add-address">Another address</span>
-            <span class="btn btn-primary" id="add-phone-number">Another Phone #</span>
-
-            <button type="submit" class="btn">Add</button>
+            <button type="submit" class="btn btn-warning">Track!</button>
           </form>
-          <div id="show-contacts">
-            <h2>Contacts:</h2>
-            <ul id="contacts">
-          </div>
-          </ul>
         </div>
-
         <div class="col-md-6">
-          <div id="show-contact">
-            <h2></h2>
-
-            <p>First name: <span class="first-name"></span></p>
-            <p>Last name: <span class="last-name"></span></p>
-            <p>Address(es):</p>
-            <ul id="addresses">
-
-            </ul>
-            <p>Phone Number(s):</p>
-            <ul id="phone-numbers">
-
-            </ul>  
-          </div>
+          <h2>Purchases:</h2>
+          <table id="purchases">
+            <tr>
+              <th scope="col">Description</th>
+              <th scope="col">Amount</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
